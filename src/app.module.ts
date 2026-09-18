@@ -6,6 +6,7 @@ import { DocumentModule } from './document/document.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DocumentEntity } from './document/entities/document.entity';
 import { MongooseModule } from '@nestjs/mongoose';
+import { StorageModule } from './storage/storage.module.js';
 
 @Module({
   imports: [
@@ -32,6 +33,7 @@ import { MongooseModule } from '@nestjs/mongoose';
         ),
       }),
     }),
+    StorageModule,
     DocumentModule
   ],
   controllers: [AppController],
